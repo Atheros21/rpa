@@ -8,10 +8,16 @@ public class UiManager : MonoBehaviour
 {
     [SerializeField] private Button quitApp;
     [SerializeField] private TextMeshProUGUI country;
-    [SerializeField] private TextMeshProUGUI toalCases;
-    [SerializeField] private TextMeshProUGUI dailyNew;
-    [SerializeField] private TextMeshProUGUI perMillion;
-    [SerializeField] private TextMeshProUGUI kills;
+    [SerializeField] private TextMeshProUGUI population;
+    [SerializeField] private TextMeshProUGUI increaseProcentage;
+    [SerializeField] private TextMeshProUGUI increaseNumber;
+    [SerializeField] private TextMeshProUGUI density;
+    [SerializeField] private TextMeshProUGUI surface;
+    [SerializeField] private TextMeshProUGUI emigrants;
+    [SerializeField] private TextMeshProUGUI fertility;
+    [SerializeField] private TextMeshProUGUI age;
+    [SerializeField] private TextMeshProUGUI urban;
+    [SerializeField] private TextMeshProUGUI world;
     [SerializeField] private string path;
     private string fileData;
     private string[] lines;
@@ -38,22 +44,37 @@ public class UiManager : MonoBehaviour
 
         foreach (var item in lines)
         {
-            string[] lineData = (item.Trim()).Split(","[0]);
-            if (lineData[0] == targetCountry)
+            string[] lineData = (item.Trim()).Split("^"[0]);
+            if(lineData.Length<10)
             {
-                country.text = lineData[0];
-                toalCases.text = lineData[1];
-                dailyNew.text = lineData[2];
-                perMillion.text = lineData[4];
-                kills.text = lineData[5];
+                continue;
+            }
+            if (lineData[1] == targetCountry)
+            {
+                country.text = lineData[1];
+                population.text = lineData[2];
+                increaseProcentage.text = lineData[3];
+                increaseNumber.text = lineData[4];
+                density.text = lineData[5];
+                surface.text = lineData[6];
+                emigrants.text = lineData[7];
+                fertility.text = lineData[8];
+                age.text = lineData[9];
+                urban.text = lineData[10];
+                world.text = lineData[11];
                 return;
             }
         }
 
-        country.text = "";
-        toalCases.text = "";
-        dailyNew.text = "";
-        perMillion.text = "";
-        kills.text = "";
+        population.text = "";
+        increaseProcentage.text = "";
+        increaseNumber.text = "";
+        density.text = "";
+        surface.text = "";
+        emigrants.text = "";
+        fertility.text = "";
+        age.text = "";
+        urban.text = "";
+        world.text = "";
     }
 }
