@@ -4,11 +4,12 @@ public class Reteta {
 	private String name;
 	private String description;
 	private int cost;
-
-	public Reteta(String name, String description, int cost) {
+	private int time;
+	public Reteta(String name, String description, int cost,int time) {
 		this.name = name;
 		this.description = description;
 		this.cost = cost;
+		this.time = time;
 	}
 	
 	public String GetName()
@@ -24,5 +25,16 @@ public class Reteta {
 	public int GetCost()
 	{
 		return cost;
+	}
+	
+	public int GetTime()
+	{
+		return time;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Meniu:"+GetName()+"("+GetDescription()+"), Pret:"+GetCost()+", Timp:"+GetTime();
 	}
 }
