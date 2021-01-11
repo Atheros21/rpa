@@ -3373,7 +3373,7 @@ MonoBehaviour:
   age: {fileID: 899912593}
   urban: {fileID: 475945841}
   world: {fileID: 118275474}
-  path: C:\Users\Ather\OneDrive\Desktop\RPA REPO\rpa\Assets\Data.csv
+  path: C:\Users\vio_9\Desktop\Data.csv
 --- !u!114 &1020511859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3948,7 +3948,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Covid interactive map
+  m_text: World population map
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
