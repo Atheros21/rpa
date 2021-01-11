@@ -7,7 +7,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import core.BankAccount;
 import core.Reteta;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
@@ -80,15 +79,6 @@ public class RestaurantAgent extends Agent {
 
 	public String GetAgentName() {
 		return myName;
-	}
-
-	public void AddNewClient(String clientName) {
-		try {
-			ContainerController cc = getContainerController();
-			AgentController ac1 = cc.createNewAgent(clientName, "main.agents.ClientAgent", null);
-			ac1.start();
-		} catch (Exception e) {
-		}
 	}
 
 	public static RestaurantAgent GetInstance() {

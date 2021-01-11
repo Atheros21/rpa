@@ -2,6 +2,7 @@ package user_interface;
 
 import jade.core.AID;
 import main.agents.ClientAgent;
+import main.agents.LuncherAgent;
 import main.agents.RestaurantAgent;
 
 import java.awt.*;
@@ -72,7 +73,7 @@ public class AgentCreatorUI extends JFrame {
 				}
 				else
 				{
-					a.AddNewClient(clientName_welcome.getText());
+					LuncherAgent.GetInstance().AddNewClient(clientName_welcome.getText());
 					clientName_welcome.setText("");
 					error_welcome.setVisible(false);
 				}
